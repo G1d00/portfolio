@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import { MoveUpRight, Moon, Menu, Sun, X } from 'lucide-react';
 import headerBg from "../assets/header-bg-color.png";
@@ -8,15 +8,24 @@ import headerBg from "../assets/header-bg-color.png";
 const NavBar = () => {
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll= () => setIsScrolled(window.scrollY > 0)
+    
+    window.addEventListener('scroll', handleScroll, {passive: true})
+
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, []) 
 
   return (
     <>
         <div className='fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%]'>
             <Image src={headerBg} alt="" width={500} height={500} className='w-full h-auto'/>
         </div>
-        <nav className='flex items-center justify-between px-5 lg:px-8 xl:px-[8%] py-4 fixed w-full z-50'>
+        <nav className={`flex items-center justify-between px-5 lg:px-8 xl:px-[8%] py-4 fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/50 backdrop-blur-lg shadow-sm' : ""}`}>
             <div/>
-            <ul className='hidden md:flex items-center gap-6 lg:gap-8 rounded-full shadow-sm bg-opacity-50 px-12 py-3 font-ovo'>
+            <ul className={`hidden md:flex items-center gap-6 lg:gap-8 px-12 py-3 font-ovo ${isScrolled ? "" : "rounded-full shadow-sm bg-white/50"}`}>
                 <li><a href=''>Home</a></li>
                 <li><a href=''>About me</a></li>
                 <li><a href=''>Services</a></li>
