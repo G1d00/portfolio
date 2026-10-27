@@ -33,10 +33,10 @@ const NavBar = () => {
                 <li><a href=''>Contact Me</a></li>
             </ul>
             <div className='flex items-center gap-4'>
-                <button className='cursor-pointer'>
+                {/* <button className='cursor-pointer'>
                     <Moon className=''/>
                     <Sun className='dark:hidden'/>
-                </button>
+                </button> */}
                 <a className='hidden lg:flex items-center gap-3 px-8 py-2.5 border border-gray-300 rounded-full hover:bg-slate-100/70 ml-4 font-ovo' href=''>
                     Contact <MoveUpRight className=''/>
                 </a>

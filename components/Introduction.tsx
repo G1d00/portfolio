@@ -5,7 +5,7 @@ import { ChevronsLeftRight, FolderClosed, GraduationCap } from 'lucide-react'
 
 const Introduction = () => {
   return (
-    <div className='w-full scroll-mt-20 py-10 px-[12%]'>
+    <div className='w-full scroll-mt-10 py-10 px-[12%]'>
         <h4 className='text-xl text-center'>Introduction</h4>
         <h2 className='text-5xl font-ovo text-center'>About me</h2>
         <div className='flex flex-col items-center my-20'>

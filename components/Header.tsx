@@ -12,10 +12,10 @@ const Header = () => {
       <h1 className='text-3xl sm:text-6xl lg:text-[66px] font-ovo'>React/React native full stack developer.</h1>
       <p>I am a full stack React developer based in Cairo with 2 years of experience.</p>
       <div className='flex gap-4 mt-5'>
-        <button className=' bg-amber-400 rounded-4xl px-10 py-3'>
+        <button className="btn btn-active btn-primary rounded-4xl px-10 py-6">
           <a className='flex flex-row items-center justify-center gap-2'>Contact me <MoveRight/></a>
         </button>
-        <button className='border border-gray-300 rounded-4xl px-10 py-3'>
+        <button className="btn btn-neutral btn-outline rounded-4xl px-10 py-6">
           <a className='flex flex-row items-center justify-center gap-2'>My resume <Download/></a>
         </button>
       </div>

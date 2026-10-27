@@ -14,11 +14,11 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
 const projects = [
-  {image: closeread, name: "CloseRead", description: "One fine filler line", backgroundClass: "bg-[#fbf1e8]" },
-  {image: wanas, name: "Wanas", description: "One fine filler line", backgroundClass: "bg-[#eaf4f2]" },
-  {image: hinty, name: "Hinty", description: "One fine filler line", backgroundClass: "bg-[#f1effb]" },
-  {image: koligo, name: "Koligo", description: "One fine filler line", backgroundClass: "bg-[#EBF8FF]" },
-  {image: candlestick, name: "Candlestick AI", description: "One fine filler line", backgroundClass: "bg-[#fbffe8]" },
+  {image: closeread, name: "CloseRead", description: "Chat Analyser · Lifestyle", backgroundClass: "bg-[#fbf1e8]" },
+  {image: wanas, name: "Wanas", description: "Dinner with strangers · Social Networking", backgroundClass: "bg-[#eaf4f2]" },
+  {image: hinty, name: "Hinty", description: "AI guide and helper for video games · Entertainment", backgroundClass: "bg-[#f1effb]" },
+  {image: koligo, name: "Koligo", description: "Personal CRM and social network manager · Productivity", backgroundClass: "bg-[#EBF8FF]" },
+  {image: candlestick, name: "Candlestick AI", description: "AI trading chart scanner · Finance", backgroundClass: "bg-[#fbffe8]" },
 ];
 
 const Portfolio = () => {
@@ -27,7 +27,16 @@ const Portfolio = () => {
     infinite: true,
     speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 3
+    slidesToScroll: 3,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
   return (
     <div className='mt-20 w-full px-[12%] py-10 scroll-mt-20'>

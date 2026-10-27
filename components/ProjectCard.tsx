@@ -14,12 +14,12 @@ type ProjectCardProps = {
 
 const ProjectCard = ({ image, name, description, backgroundClass }: ProjectCardProps) => {
     return (
-    <article className="border border-gray-200 rounded-2xl">
+    <article className="border border-gray-200 rounded-2xl min-h-[47vh] max-h-[47vh]">
       <div className={`${backgroundClass} flex items-end justify-center h-[30vh] rounded-t-2xl`}>
         <Image src={image} alt=""  className='w-40' />
       </div>
 
-      <div className="px-4 py-2 flex flex-col gap-2">
+      <div className="pl-4 pr-1 py-2 flex flex-col justify-around gap-2">
         <h2 className="text-3xl font-ovo">{name}</h2>
         <p className="text-lg font-ovo">{description}</p>
         <div className="flex gap-2 items-center">
