@@ -21,7 +21,7 @@ const NavBar = () => {
   return (
     <>
         <div className='fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%]'>
-            <Image src={headerBg} alt="" width={500} height={500} className='w-full h-auto'/>
+            <Image src={headerBg} alt="" width={500} height={500} className='w-full h-auto' loading="eager"/>
         </div>
         <nav className={`flex items-center justify-between px-5 lg:px-8 xl:px-[8%] py-4 fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/50 backdrop-blur-lg shadow-sm' : ""}`}>
             <div/>
