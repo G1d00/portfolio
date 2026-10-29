@@ -25,7 +25,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html
       lang="en"
       data-theme="light"
-      className={`${outfit.variable} ${ovo.variable} h-full antialiased`}
+      className={`${outfit.variable} ${ovo.variable} h-full antialiased scroll-smooth`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>

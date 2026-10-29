@@ -13,7 +13,7 @@ const Footer = () => {
     <div className='mt-0'>
         <div className='flex flex-row gap-1 justify-center items-center mb-10'>
             <Mail className=''/>
-            <a className='font-ovo'>mohamedgaber9822@gmail.com</a>
+            <a className='font-ovo underline cursor-pointer'>mohamedgaber9822@gmail.com</a>
         </div>
         <div className='text-center border-t border-gray-400 mx-[10%] py-3 sm:flex items-center justify-center'>
             <p>© {year} Mohamed Gaber</p>
