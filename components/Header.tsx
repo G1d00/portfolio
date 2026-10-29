@@ -51,9 +51,13 @@ const Header = () => {
         >
           Contact me <MoveRight />
         </a>
-        <button className="btn btn-neutral btn-outline rounded-4xl px-10 py-6">
-          <a className='flex flex-row items-center justify-center gap-2'>My resume <Download/></a>
-        </button>
+        <a
+          href="/MohamedGaber.pdf"
+          download="Mohamed-Gaber-Resume.pdf"
+          className="btn btn-neutral btn-outline rounded-4xl px-10 py-6 flex items-center justify-center gap-2"
+        >
+          My resume <Download />
+        </a>
       </div>
     </div>
   )
