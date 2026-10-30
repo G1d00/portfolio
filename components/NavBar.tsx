@@ -74,6 +74,14 @@ const NavBar = () => {
                 </button>
             </div>
 
+            {isMenuOpen && (
+                <button
+                    type="button"
+                    aria-label="Close navigation menu"
+                    onClick={() => setIsMenuOpen(false)}
+                    className="fixed inset-0 z-40 bg-black/20 md:hidden"
+                />
+            )}
             <ul className={`fixed top-0 right-0 z-50 h-screen w-64 bg-rose-50 px-10 py-20 flex md:hidden flex-col gap-4 font-ovo transition-transform duration-500 ${isMenuOpen ? "translate-x-0" : "translate-x-full"}`}>
                 <button onClick={() => {setIsMenuOpen(false)}} className='cursor-pointer'>
                     <X />
@@ -89,4 +97,3 @@ const NavBar = () => {
 }
 
 export default NavBar
-
