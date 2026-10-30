@@ -1,9 +1,7 @@
 'use client'
 
-import React from 'react'
-import Image from 'next/image'
+import { useEffect, useState } from 'react'
 import ProjectCard from "./ProjectCard"
-import temp from "../assets/temp.png"
 import koligo from "../assets/koligo.png"
 import closeread from "../assets/closeread.png"
 import hinty from "../assets/hinty.png"
@@ -22,21 +20,24 @@ const projects = [
 ];
 
 const Portfolio = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 1024px)");
+    const updateIsMobile = () => setIsMobile(mediaQuery.matches);
+
+    updateIsMobile();
+    mediaQuery.addEventListener("change", updateIsMobile);
+
+    return () => mediaQuery.removeEventListener("change", updateIsMobile);
+  }, []);
+
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 3,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
+    slidesToShow: isMobile ? 1 : 3,
+    slidesToScroll: isMobile ? 1 : 3,
   };
   return (
     <div className='mt-20 w-full px-[12%] py-10 scroll-mt-20' id='work'>
